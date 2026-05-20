@@ -110,6 +110,15 @@ html, body { height: 100%; font-family: 'Zen Kaku Gothic New', sans-serif; backg
 .not-found-icon { font-size: 48px; margin-bottom: 12px; }
 .not-found-title { font-family: 'Shippori Mincho', serif; font-size: 21px; margin-bottom: 10px; }
 .not-found-desc { font-size: 16px; color: var(--muted); line-height: 1.8; margin-bottom: 20px; }
+
+  .privacy-note {
+    text-align: center;
+    font-size: 10px;
+    color: #bbb;
+    padding: 8px 0 4px;
+    flex-shrink: 0;
+  }
+  .privacy-note a { color: #bbb; text-decoration: underline; }
 </style>
 </head>
 <body>
@@ -136,6 +145,7 @@ html, body { height: 100%; font-family: 'Zen Kaku Gothic New', sans-serif; backg
     </div>
   </div>
   <button class="btn-start" onclick="show('page-1')">検索スタート ›</button>
+  <div class="privacy-note">このサイトはGoogle Analyticsを使用しています</div>
 </div>
 
 <!-- STEP 1 -->
@@ -164,8 +174,10 @@ html, body { height: 100%; font-family: 'Zen Kaku Gothic New', sans-serif; backg
       <button class="cat-btn" id="cat-お祝い・ギフト" onclick="selCat('お祝い・ギフト')"><div class="cat-icon">🎁</div><div class="cat-name">🎁 お祝い・ギフト</div><div class="cat-sub">誕生日・卒業・入学など</div></button>
       <button class="cat-btn" id="cat-推し活" onclick="selCat('推し活')"><div class="cat-icon">⭐</div><div class="cat-name">⭐ 推し活</div><div class="cat-sub">推しへの想いをカタチに</div></button>
       <button class="cat-btn" id="cat-手作りキット" onclick="selCat('手作りキット')"><div class="cat-icon">🎀</div><div class="cat-name">🎀 手作りキット</div><div class="cat-sub">フェルトカット済み・材料セット</div></button>
+      <button class="cat-btn" id="cat-オンライン講座" onclick="selCat('オンライン講座')"><div class="cat-icon">🎬</div><div class="cat-name">🎬 オンライン講座</div><div class="cat-sub">ミルームで動画レッスン</div></button>
     </div>
   </div>
+  <div class="privacy-note">このサイトはGoogle Analyticsを使用しています</div>
   <div class="nav">
     <button class="btn-back" onclick="goTop()">← トップへ</button>
     <button class="btn-next" id="next-1" disabled onclick="goStep2()">次へ ›</button>
@@ -192,6 +204,7 @@ html, body { height: 100%; font-family: 'Zen Kaku Gothic New', sans-serif; backg
     <div class="step-desc">該当する種目のボタンを押してください</div>
     <div class="sport-wrap" id="sport-wrap"></div>
   </div>
+  <div class="privacy-note">このサイトはGoogle Analyticsを使用しています</div>
   <div class="nav">
     <button class="btn-back" onclick="show('page-1')">← 戻る</button>
     <button class="btn-next" id="next-2" disabled onclick="goNext2()">次へ ›</button>
@@ -221,6 +234,7 @@ html, body { height: 100%; font-family: 'Zen Kaku Gothic New', sans-serif; backg
       <button class="level-btn" id="lv-立体" onclick="selLevel('立体')"><div class="level-name">🧵 じっくり製作 🪡 大切な人へ</div><div class="level-desc">立体感のあるお守りシリーズ。時間をかけても作ってみたい方に。</div></button>
     </div>
   </div>
+  <div class="privacy-note">このサイトはGoogle Analyticsを使用しています</div>
   <div class="nav">
     <button class="btn-back" onclick="goBack3()">← 戻る</button>
     <button class="btn-next" id="next-3" disabled onclick="show('page-4')">次へ ›</button>
@@ -250,6 +264,7 @@ html, body { height: 100%; font-family: 'Zen Kaku Gothic New', sans-serif; backg
       <button class="type-btn" id="type-DL" onclick="selType('💾DL')"><div class="type-icon">💾</div><div class="type-name">ダウンロード版</div><div class="type-desc">ご自身で印刷してご使用ください</div></button>
     </div>
   </div>
+  <div class="privacy-note">このサイトはGoogle Analyticsを使用しています</div>
   <div class="nav">
     <button class="btn-back" onclick="show('page-3')">← 戻る</button>
     <button class="btn-next" id="next-4" disabled onclick="showResult()">結果を見る ›</button>
@@ -272,6 +287,7 @@ html, body { height: 100%; font-family: 'Zen Kaku Gothic New', sans-serif; backg
     </div>
   </div>
   <div class="step-body" id="result-body"></div>
+  <div class="privacy-note">このサイトはGoogle Analyticsを使用しています</div>
   <div class="nav">
     <button class="btn-back" onclick="show('page-4')">← 戻る</button>
     <button class="btn-next" onclick="goTop()">最初から ›</button>
@@ -367,7 +383,12 @@ const SERIES=[
   {cat:"お祝い・ギフト",sport:"お祝い・ギフト🎁",level:"立体",type:"💾DL",url:"https://minne.com/@kata-koto/series/151753",status:"公開"},
   {cat:"推し活",sport:"推し活⭐",level:"簡単",type:"共通",url:"https://minne.com/@kata-koto/series/152355",status:"公開"},
   {cat:"推し活",sport:"推し活⭐",level:"立体",type:"共通",url:"https://minne.com/@kata-koto/series/152356",status:"公開"},
-  {cat:"手作りキット",sport:"手作りキット🎀",level:"共通",type:"共通",url:"https://minne.com/@kata-koto/series/151219",status:"公開"}
+  {cat:"手作りキット",sport:"手作りキット🎀",level:"共通",type:"共通",url:"https://minne.com/@kata-koto/series/151219",status:"公開"},
+  {cat:"推し活",sport:"推し活⭐",level:"簡単",type:"共通",url:"https://minne.com/@kata-koto/series/151748",status:"公開"},
+  {cat:"推し活",sport:"推し活⭐",level:"立体",type:"共通",url:"https://minne.com/@kata-koto/series/151749",status:"公開"},
+  {cat:"手作りキット",sport:"手作りキット🎀",level:"共通",type:"共通",url:"https://minne.com/@kata-koto/series/151219",status:"公開"},
+  {cat:"オンライン講座",sport:"オンライン講座🎬",level:"簡単",type:"前編",url:"https://miroom.com/courses/3441",status:"公開"},
+  {cat:"オンライン講座",sport:"オンライン講座🎬",level:"立体",type:"後編",url:"https://miroom.com/courses/3551",status:"公開"},
 ];
 
 const SPORTS={
@@ -405,7 +426,6 @@ function selCat(c){
 function goStep2(){
   const sp=SPORTS[S.cat];
   if(!sp){
-    // 種目なしカテゴリー
     if(S.cat==='受験生応援') S.sport='受験生応援✏️';
     else if(S.cat==='お祝い・ギフト') S.sport='お祝い・ギフト🎁';
     else if(S.cat==='推し活') S.sport='推し活⭐';
@@ -413,6 +433,10 @@ function goStep2(){
       S.sport='手作りキット🎀';
       S.level='共通'; S.type='共通';
       showResult(); return;
+    }
+    else if(S.cat==='オンライン講座'){
+      S.sport='オンライン講座🎬';
+      show('page-3'); return;
     }
     else S.sport=S.cat;
     show('page-3');
@@ -468,9 +492,11 @@ function selType(t){
 
 document.addEventListener('DOMContentLoaded', function(){
   document.getElementById('next-3').addEventListener('click', function(){
-    // 推し活はタイプ選択スキップ
     if(S.cat==='推し活'){
       S.type='共通';
+      showResult();
+    } else if(S.cat==='オンライン講座'){
+      S.type = S.level==='簡単' ? '前編' : '後編';
       showResult();
     } else {
       show('page-4');
@@ -483,27 +509,28 @@ function showResult(){
     s.cat===S.cat && s.sport===S.sport &&
     s.level===S.level && s.type===S.type
   );
-  const tl=S.type==='共通'?'発送・DL共通':S.type==='📦発送'?'印刷・発送版':'ダウンロード版';
+  const tl=S.type==='共通'?'発送・DL共通':S.type==='📦発送'?'印刷・発送版':S.type==='💾DL'?'ダウンロード版':S.type==='前編'?'前編':'後編';
   const ll=S.level==='簡単'?'🌱 苦手さん応援':S.level==='立体'?'🧵 じっくり製作':'共通';
   const b=document.getElementById('result-body');
+  const btnLabel=S.cat==='オンライン講座'?'ミルームで見る ›':'minneで見る ›';
   if(m && m.status==='公開' && m.url){
     b.innerHTML='<div class="result-wrap"><div class="result-card">'
       +'<div class="badges">'
       +'<span class="badge">'+S.cat+'</span>'
       +'<span class="badge">'+S.sport+'</span>'
       +(S.level!=='共通'?'<span class="badge">'+ll+'</span>':'')
-      +'<span class="badge">'+tl+'</span>'
+      +(S.type!=='共通'?'<span class="badge">'+tl+'</span>':'')
       +'</div>'
-      +'<div class="result-name">'+S.sport+'の型紙・作り方シリーズ</div>'
-      +'<div class="result-desc">'+ll+(S.level!=='共通'?'<br>':'')+''+tl+'でお届けします。</div>'
-      +'<a class="btn-minne" href="'+m.url+'" target="_blank">minneで見る ›</a>'
+      +'<div class="result-name">'+S.sport+'のシリーズ</div>'
+      +'<div class="result-desc">'+(S.level!=='共通'?ll+'<br>':'')+''+tl+'でお届けします。</div>'
+      +'<a class="btn-minne" href="'+m.url+'" target="_blank">'+btnLabel+'</a>'
       +'</div></div>';
   } else {
-    const sportLabel=S.level==='共通'?'苦手さん応援・じっくり製作':S.level==='簡単'?'苦手さん応援':'じっくり製作';
+    const sportLabel=S.level==='共通'?'':S.level==='簡単'?'苦手さん応援':'じっくり製作';
     b.innerHTML='<div class="result-wrap"><div class="not-found">'
       +'<div class="not-found-icon">🪡</div>'
       +'<div class="not-found-title">このシリーズは準備中です</div>'
-      +'<div class="not-found-desc"><strong>'+S.sport+' × '+sportLabel+' × '+tl+'</strong><br>のシリーズは現在準備中です。<br>近日公開予定です。</div>'
+      +'<div class="not-found-desc"><strong>'+S.sport+(sportLabel?' × '+sportLabel:'')+(S.type!=='共通'?' × '+tl:'')+'</strong><br>のシリーズは現在準備中です。<br>近日公開予定です。</div>'
       +'<a class="btn-minne" href="https://minne.com/@kata-koto" target="_blank">kata-kotoショップを見る ›</a>'
       +'</div></div>';
   }
