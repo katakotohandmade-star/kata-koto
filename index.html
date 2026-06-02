@@ -537,5 +537,15 @@ function showResult(){
   show('page-5');
 }
 </script>
-</body>
+<script>
+document.addEventListener('click', function(e) {
+  var link = e.target.closest('a[href*="minne.com"]');
+  if (!link) return;
+  var nameEl = link.closest('.result-card') && link.closest('.result-card').querySelector('.result-name');
+  gtag('event', 'click_minne_link', {
+    item_name: nameEl ? nameEl.textContent : 'kata-kotoショップ',
+    clicked_url: link.href
+  });
+});
+</script></body>
 </html>
